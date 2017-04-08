@@ -1,0 +1,103 @@
+@import "normalize.scss";
+
+/*---------------SECTION-MAIN-------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.tabs
+{
+    width: 100%;
+    height: 220px;
+    font: normal 11px Arial, Sans-serif;
+    color: #404040;
+}
+
+.tabs,
+.tab__radio:checked + .tab__label {
+    position: relative;
+}
+
+.tab,
+.tab__label {
+    display: inline-block;
+    vertical-align: middle
+    
+}
+
+.tab__content,
+.tab__radio {
+    position: absolute;
+}
+
+.tab__content,,
+.tab__label {
+    border: solid 1px #ccc;
+}
+
+.tab:first-child {
+    margin-left: 8px;
+}
+
+.tab__content {
+    top: 33px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    overflow: auto;
+    background: #fff;
+}
+
+.tab__label {
+    margin: 0 2px 0 0;
+    padding: 0 18px;
+    line-height: 32px;
+    background: #f1f1f1;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab__radio:checked + .tab__label {
+    z-index: 1;
+    background: #fff;
+    border-bottom-color: #fff;
+    cursor: default;
+}
+
+.tab__radio {
+    opacity: 0;
+}
+
+.tab__content {
+    display: none;
+}
+
+.tab__radio:checked:not(:disabled) ~.tab__content {
+    display: block;
+}
+
+.tab__radio:disabled + .tab__label {
+    opacity: .5;
+    cursor: no-drop;
+}
